@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { DEFAULT_INTERRUPTSOURCES, Idle } from '@ng-idle/core';
 import { Keepalive } from '@ng-idle/keepalive';
+import { DEFAULT_INTERRUPTSOURCES, Idle } from '@ng-idle/core';
 import { TimeoutModalComponent } from './timeout-modal/timeout-modal.component';
 
 @Component({
@@ -9,7 +9,6 @@ import { TimeoutModalComponent } from './timeout-modal/timeout-modal.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
 export class AppComponent {
   title = 'idle-test';
   idleState = 'Not Started';
@@ -91,5 +90,4 @@ export class AppComponent {
     }
 
 }
-
 

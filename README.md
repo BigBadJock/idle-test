@@ -1,8 +1,6 @@
-# IdleTest
+# IdleTest2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
-
-This is a simple Angular 7 website to test the use of ng-idle/core and ng-bootstrap to show a progress bar counting down to logout when the user has been idle for an amount of time.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
 ## Development server
 

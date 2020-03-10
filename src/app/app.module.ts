@@ -1,16 +1,14 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { MomentModule } from 'angular2-moment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgIdleKeepaliveModule } from '@ng-idle/keepalive';
-import { MomentModule } from 'angular2-moment';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TimeoutModalComponent } from './timeout-modal/timeout-modal.component';
-
-
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,15 +18,13 @@ import { TimeoutModalComponent } from './timeout-modal/timeout-modal.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule,    
     MomentModule,
-    NgIdleKeepaliveModule.forRoot(),
     NgbModule,
-
+    NgIdleKeepaliveModule.forRoot(),
+    
   ],
-  entryComponents:[
-      TimeoutModalComponent,
-  ],
+  entryComponents:[TimeoutModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
