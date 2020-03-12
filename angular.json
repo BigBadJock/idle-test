@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "idle-test2"
+    }
+  },
+  "defaultProject": "idle-test2",
+  "cli": {
+    "analytics": "0d9a84ad-4ca6-4d92-9c7b-8a464ff13d0a"
+  }
 }
