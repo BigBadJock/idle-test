@@ -13,13 +13,13 @@ export class AppComponent {
   title = 'idle-test';
   idleState = 'Not Started';
   timedOut = false;
-  lastPing? : Date  = null;
-  timeoutCountdown :number = null;
+  lastPing? : Date;
+  timeoutCountdown :number =0;
   timeoutMax =5;
   idleTime = 5;
   showingModal = false;
-  closeResult: string;
-  modalRef = null;
+  closeResult: string ="";
+  modalRef= null;
 
     constructor( private idle: Idle, private keepalive: Keepalive, private modalService: NgbModal){
       idle.setIdle(this.idleTime);
@@ -29,14 +29,14 @@ export class AppComponent {
       idle.onIdleEnd.subscribe(() => {
         this.idleState = 'No longer idle.';
         this.modalRef.componentInstance.timedOut = false;
-        this.timeoutCountdown = null;
+        this.timeoutCountdown = 0;
         this.closeModal();
       });
 
       idle.onTimeout.subscribe(() => {
         this.idleState = 'Timed out!';
         this.timedOut = true;
-        this.timeoutCountdown = null;
+        this.timeoutCountdown = 0;
         this.modalRef.componentInstance.timedOut = true;
       });
       idle.onIdleStart.subscribe(() => this.idleState = 'You\'ve gone idle!');
